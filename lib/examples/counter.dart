@@ -5,6 +5,16 @@ class CounterApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: Scaffold(body: Text('hello')));
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Column(children: [
+            const Text('hello'),
+            ElevatedButton(
+                onPressed: () => print('pressed'), child: const Text('+'))
+          ]),
+        ),
+      ),
+    );
   }
 }
