@@ -4,5 +4,5 @@ import 'package:flutter/material.dart';
 
 void main() {
 //   runApp(const MyWidget());
-  runApp(const CounterApp());
+  runApp(const Counter());
 }

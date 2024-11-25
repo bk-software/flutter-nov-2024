@@ -1,18 +1,37 @@
 import 'package:flutter/material.dart';
 
-class CounterApp extends StatelessWidget {
-  const CounterApp({super.key});
+class Counter extends StatelessWidget {
+  const Counter({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Column(children: [
+        appBar: AppBar(
+          title: const Text('Counter'),
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
+        ),
+        body: Column(
+          children: [
             const Text('hello'),
-            ElevatedButton(
-                onPressed: () => print('pressed'), child: const Text('+'))
-          ]),
+            Row(
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    print('+');
+                  },
+                  child: const Text('+'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print('-');
+                  },
+                  child: const Text('-'),
+                )
+              ],
+            ),
+          ],
         ),
       ),
     );
