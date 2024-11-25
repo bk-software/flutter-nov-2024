@@ -15,21 +15,32 @@ class Counter extends StatelessWidget {
         body: Column(
           children: [
             const Text('hello'),
-            Row(
-              children: [
-                ElevatedButton(
-                  onPressed: () {
-                    print('+');
-                  },
-                  child: const Text('+'),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    print('-');
-                  },
-                  child: const Text('-'),
-                )
-              ],
+            Container(
+              color: Colors.amber,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      print('+');
+                    },
+                    child: const Text('+'),
+                  ),
+                  const SizedBox(width: 30),
+                  ElevatedButton(
+                    onPressed: () {
+                      print('-');
+                    },
+                    child: const Text('-'),
+                  )
+                ],
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                print('Reset');
+              },
+              child: const Text('Reset'),
             ),
           ],
         ),
